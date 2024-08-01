@@ -1,15 +1,17 @@
 import React from "react";
 
 interface InputProps{
+    id : string,
     type?: string,
     placeholder : string,
     onChange : any,
     value : string
 }
 
-const Input : React.FC<InputProps> = ({placeholder,type,value,onChange}) =>{
+const Input : React.FC<InputProps> = ({placeholder,type,value,onChange,id}) =>{
     return (
         <input 
+        id = {id}
         className="
         block
         rounded-md
@@ -26,6 +28,7 @@ const Input : React.FC<InputProps> = ({placeholder,type,value,onChange}) =>{
         type ={type}
         value={value}
         onChange={onChange}
+        
         />
     )
 }
