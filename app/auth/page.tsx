@@ -17,7 +17,7 @@ const Auth = () =>{
 
     const register = useCallback(async()=>{
         try{
-          await axios.post("http://localhost:3001/api/register",{
+          await axios.post("/api/register",{
             data :{
               email,
             password,
